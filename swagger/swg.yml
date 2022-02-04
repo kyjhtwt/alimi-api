@@ -1,0 +1,132 @@
+components:
+  schemas:
+    teams:
+      properties:
+        id:
+          type: integer
+          definition: team's id
+        cash:
+          type: integer
+          definition: amount of cash this team has
+        bio:
+          type: integer
+          definition: number of bio stocks the team has
+        electronics:
+          type: integer
+          definition: number of electronics stocks the team has
+        construction:
+          type: integer
+          definition: number of construction stocks the team has
+        food:
+          type: integer
+          definition: number of food stocks the team has
+        broadcast:
+          type: integer
+          definiton: number of broadcast stocks the team has
+        asset:
+          type: integer
+          definition: amount of total asset this team has
+    stocks:
+      properties:
+        field:
+          type: string
+          definition: field of the stock
+        price:
+          type: array
+          items:
+            type: integer
+            definition: prices of the stock         
+        count:
+          type: integer
+          definition: number of the stock present now
+    postStocks:
+      properties:
+        price:
+          type: array
+          items: 
+            type: integer
+            definition: prices of the stock
+        count:
+          type: integer
+          definition: number of the stock present now
+    putStocks:
+      properties:
+        count:
+            type: integer
+            definition: number of the stock present now
+    putTeams:
+        properties:
+          cash:
+            type: integer
+            definition: amount of cash this team has
+          bio:
+            type: integer
+            definition: number of bio stocks the team has
+          electronics:
+            type: integer
+            definition: number of electronics stocks the team has
+          construction:
+            type: integer
+            definition: number of construction stocks the team has
+          food:
+            type: integer
+            definition: number of food stocks the team has
+          broadcast:
+            type: integer
+            definiton: number of broadcast stocks the team has
+    trade:
+        properties:
+          teamId:
+            type: integer
+            definition: Id of the team requesting trade
+          turn:
+            type: integer
+            definition: turn of the current trade
+          preCash:
+            type: integer
+            definition: amount of cash that the team had before trade
+          bio:
+            type: integer
+            definition: amount of stock trying to trade
+          construction:
+            type: integer
+            definition: amount of stock trying to trade
+          electronics:
+            type: integer
+            definition: amount of stock trying to trade
+          food:
+            type: integer
+            definition: amount of stock trying to trade
+          broadcast:
+            type: integer
+            definition: amount of stock trying to trade
+          tradeType:
+            type: string
+            definition: type of the trade (purchase or sale)
+    purChaseResult:
+      properties:
+          Cash:
+            type: integer
+          bioFailed:
+            type: integer
+          returnCash:
+            type: integer
+          constructionFailed:
+            type: integer
+          electronicsFailed:
+            type: integer
+          foodFailed:
+            type: integer
+          broadcastFailed:
+            type: integer
+          bioSuccess:
+            type: integer
+          constructionSuccess:
+            type: integer
+          electronicsSuccess:
+            type: integer
+          foodSuccess:
+            type: integer
+          broadcastSuccess:
+            type: integer
+          
